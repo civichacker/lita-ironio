@@ -1,5 +1,4 @@
 require 'iron_worker_ng'
-require 'iron_cache'
 require 'iron_mq'
 require 'lita/utils/factory'
 
@@ -18,12 +17,11 @@ module Lita
         self.iron = nil
       end
 
-      route /^ir(?:on)?\s(tasks|stacks|codes|schedules|queues|caches)$/i, :list, help: {
+      route /^ir(?:on)?\s(tasks|stacks|schedules|queues|caches)$/i, :list, help: {
         "iron tasks" => "list project tasks",
         "iron stacks" => "list available stacks",
         "iron codes" => "list project code packages",
         "iron queues" => "list project queues",
-        "iron caches" => "list project caches"
       }
 
       route /^ir(?:on)?\s(tasks|stacks|codes|schedules|queues)?\s(.+)$/i, :get, help: {
@@ -65,15 +63,12 @@ module Lita
         plugin = {
           [:stacks, :tasks, :codes] => :worker,
           [:queues] => :mq,
-          [:caches] => :cache
         }.select {|k,v| k.include?(lib) }.values
         case plugin.first
           when :worker
             self.class.iron ||= IronWorkerNG::Client.new({token: config.token, project_id: config.project_id})
           when :mq
             self.class.iron ||= IronMQ::Client.new({token: config.token, project_id: config.project_id})
-          when :cache
-            self.class.iron ||= IronCache::Client.new({token: config.token, project_id: config.project_id})
           else
             self.class.iron ||= IronWorkerNG::Client.new({token: config.token, project_id: config.project_id})
         end

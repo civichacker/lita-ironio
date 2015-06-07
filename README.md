@@ -1,6 +1,6 @@
 # lita-ironio [![Gem Version](https://badge.fury.io/rb/lita-ironio.svg)](http://badge.fury.io/rb/lita-ironio)
 
-**lita-ironio** is an handler for [Lita](https://www.lita.io) that gives your bot the power to interact with [Iron.io](https://iron.io)'s [IronWorker](http://www.iron.io/worker), [IronMQ](http://www.iron.io/mq), and [IronCache](http://www.iron.io/cache) solutions.
+**lita-ironio** is an handler for [Lita](https://www.lita.io) that gives your bot the power to interact with [Iron.io](https://iron.io)'s [IronWorker](http://www.iron.io/worker) and [IronMQ](http://www.iron.io/mq).
 
 TODO: Add a description of the plugin.
 

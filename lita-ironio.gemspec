@@ -15,9 +15,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "lita", "~> 4.3"
-  spec.add_runtime_dependency "iron_worker_ng"
-  spec.add_runtime_dependency "iron_cache"
-  spec.add_runtime_dependency "iron_mq"
+  spec.add_runtime_dependency "iron_worker_ng", "~> 1.6"
+  spec.add_runtime_dependency "iron_cache", "~> 0"
+  spec.add_runtime_dependency "iron_mq", "~> 5.0"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "pry-byebug"

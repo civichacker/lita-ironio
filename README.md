@@ -2,8 +2,6 @@
 
 **lita-ironio** is an handler for [Lita](https://www.lita.io) that gives your bot the power to interact with [Iron.io](https://iron.io)'s [IronWorker](http://www.iron.io/worker) and [IronMQ](http://www.iron.io/mq).
 
-TODO: Add a description of the plugin.
-
 ## Installation
 
 Add lita-ironio to your Lita instance's Gemfile:

@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-ironio"
-  spec.version       = "0.2.1-beta"
+  spec.version       = "0.2.2-beta"
   spec.authors       = ["Jurnell Cockhren"]
   spec.email         = ["jurnell.cockhren@sophicware.com"]
   spec.description   = "IronIO handler for Lita Bot"

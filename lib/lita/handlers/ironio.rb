@@ -1,6 +1,5 @@
 require 'iron_worker_ng'
 require 'iron_mq'
-require 'lita/utils/factory'
 
 module Lita
   module Handlers
